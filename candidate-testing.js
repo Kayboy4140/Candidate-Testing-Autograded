@@ -18,7 +18,7 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-let candidateName = input.question("Enter your name: ");
+candidateName = input.question("Enter your name: ");
 }
 
 function askQuestion() {
@@ -31,7 +31,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 if (candidateAnswer === "Sally Ride") {
-  console.log("Your answer is correct!");
+  console.log("Great job, " + candidateName + ". Your answer is indeed correct!");
 } else {
   console.log("Your answer is incorrect!")
 }
