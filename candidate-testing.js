@@ -46,7 +46,7 @@ if (candidateAnswer === "Sally Ride") {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hello, " + candidateName);
+   console.log("Hello, " + candidateName + ". I hope you are prepared for this quiz!");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
