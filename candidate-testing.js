@@ -11,9 +11,12 @@ let candidateAnswer = "";
 
 
 //TODO: Variables for Part 2
-let questions;
-let correctAnswers;
-let candidateAnswers;
+let questions = [];
+let correctAnswers = [];
+let candidateAnswers = [];
+
+questions.push("Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", "What is the minimum crew size for the ISS? ");
+correctAnswers.push("Sally Ride", "true", "40", "Trajectory", "3");
 
 
 function askForName() {
@@ -23,19 +26,21 @@ candidateName = input.question("Enter your name: ");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-console.log(question);
-candidateAnswer = input.question("What is your answer? ");
+
+for (let i=0; i<questions.length; i++) {
+  console.log(questions[i]);
+  candidateAnswers.push(input.question("What is your answer? "));
+}
+
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer === "Sally Ride") {
-  console.log("Great job, " + candidateName + ". Your answer is indeed correct!");
-} else {
-  console.log("Your answer is incorrect!")
-}
 
+for (let i=0; i<questions.length; i++) {
+  console.log(`${candidateName}'s response: ${candidateAnswers[i]}   Correct answer: ${correctAnswers[i]}`)
+}
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
